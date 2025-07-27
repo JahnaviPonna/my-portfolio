@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PulseFit | Fitness Landing Page</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    :root {
+      --bg-light: #FFF8F0;
+      --accent: #DA627D;
+      --text-dark: #3D2C2E;
+    }
+  </style>
+</head>
+
+<body class="bg-[var(--bg-light)] text-[var(--text-dark)] font-sans">
+
+  <!-- Header -->
+  <header class="bg-[var(--accent)] text-white py-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">PulseFit – Fitness Landing Page</h1>
+      <a href="index.html" class="text-white underline hover:text-yellow-100">← Back to Portfolio</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-16 space-y-16">
+
+    <!-- Intro -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6">💪 PulseFit – Fitness Homepage Clone</h2>
+      <p class="text-lg leading-relaxed">
+        PulseFit is a responsive, visually engaging homepage clone for a fitness platform. Built entirely using HTML and Tailwind CSS, it demonstrates modern web layout skills, scroll animations, and mobile responsiveness for landing pages.
+      </p>
+    </section>
+
+    <!-- What It Does -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🔧 What It Does</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Replicates a modern fitness brand's animated homepage layout.</li>
+        <li>Includes hero section, call-to-action buttons, testimonials, and feature blocks.</li>
+        <li>Uses scroll-based animations and transitions for an interactive UI.</li>
+        <li>Fully responsive across desktops, tablets, and mobile devices.</li>
+      </ul>
+    </section>
+
+    <!-- Screenshots -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🖼️ How It Looks – Screenshots</h2>
+
+      <!-- Homepage -->
+      <div class="mb-10">
+        <h3 class="text-xl font-bold mb-2">1️⃣ Homepage UI</h3>
+        <p class="text-md mb-2">Displays banner, about, and services section styled with Tailwind.</p>
+        <img src="fit1.jpg" alt="PulseFit Homepage" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div><br>
+      <img src="fit2.jpg" alt="PulseFit Homepage" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div><br>
+      <img src="fit3.jpg" alt="PulseFit Homepage" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div>
+
+      <!-- Responsive View -->
+      <!-- <div>
+        <h3 class="text-xl font-bold mb-2">2️⃣ Mobile Responsive View</h3>
+        <p class="text-md mb-2">Seamless experience on small devices with stacked content.</p>
+        <img src="pulsefit_mobile.png" alt="PulseFit Mobile" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div>
+    </section> -->
+
+    <!-- Tech Stack -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🧰 Tech Stack</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li><strong>Frontend:</strong> HTML, Tailwind CSS</li>
+        <li><strong>Animations:</strong> AOS (Animate on Scroll)</li>
+        <li><strong>Deployment:</strong> Netlify / GitHub Pages</li>
+      </ul>
+    </section>
+
+    <!-- Key Highlights -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🎯 Key Highlights</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Scroll-based animation effects using AOS</li>
+        <li>Pixel-perfect section-based layout structure</li>
+        <li>Optimized for responsiveness and performance</li>
+        <li>Great for beginner front-end and landing page practice</li>
+      </ul>
+    </section>
+
+    <!-- GitHub Button -->
+    <section data-aos="fade-up" class="text-center">
+      <a href="https://github.com/JahnaviPonna/pulsefit-page" target="_blank"
+        class="inline-block bg-[var(--accent)] text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-pink-700 transition">
+        🔗 View on GitHub <i class="fab fa-github ml-2"></i>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--accent)] text-white text-center py-4 mt-16">
+    <p>© 2025 Ponna Jahnavi Sushma Priya</p>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

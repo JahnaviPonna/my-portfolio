@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe | Project</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    :root {
+      --bg-light: #FFF8F0;
+      --accent: #DA627D;
+      --text-dark: #3D2C2E;
+    }
+  </style>
+</head>
+
+<body class="bg-[var(--bg-light)] text-[var(--text-dark)] font-sans">
+
+  <!-- Header -->
+  <header class="bg-[var(--accent)] text-white py-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Tic Tac Toe Game</h1>
+      <a href="index.html" class="text-white underline hover:text-yellow-100">← Back to Portfolio</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-16 space-y-16">
+
+    <!-- Intro -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6">❌⭕ Tic Tac Toe Game</h2>
+      <p class="text-lg leading-relaxed">
+        A classic two-player game built entirely using HTML, CSS, and JavaScript. It offers a fun and interactive way to understand core front-end programming, user interactivity, and logic flow.
+      </p>
+    </section>
+
+    <!-- What It Does -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🔧 What It Does</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Displays a responsive 3x3 game board.</li>
+        <li>Allows two players to take alternating turns with X and O.</li>
+        <li>Detects winner or draw and displays the result.</li>
+        <li>Includes a reset button to restart the game anytime.</li>
+      </ul>
+    </section>
+
+    <!-- Screenshots -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🖼️ How It Looks – Screenshots</h2>
+
+      <!-- Initial Game UI -->
+      <div class="mb-10">
+        <h3 class="text-xl font-bold mb-2">1️⃣ Initial Game UI</h3>
+        <p class="text-md mb-2">Simple and intuitive board UI with empty cells.</p>
+        <img src="ttt1.jpg" alt="Initial Game UI" class="rounded-lg shadow-md w-full max-w-xs mx-auto">
+      </div>
+
+      <!-- Gameplay -->
+      <div class="mb-10">
+        <h3 class="text-xl font-bold mb-2">2️⃣ Gameplay In Progress</h3>
+        <p class="text-md mb-2">Users take turns. Logic checks for winner or draw after each move.</p>
+        <img src="ttt2.jpg" alt="Gameplay Screenshot" class="rounded-lg shadow-md w-full max-w-xs mx-auto">
+      </div>
+
+      <!-- Result Screen -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">3️⃣ Game Result Display</h3>
+        <p class="text-md mb-2">Winner is displayed or game declared as draw with a reset option.</p>
+        <img src="ttt3.jpg" height = "500px" width = "200px" alt="Game Result Screenshot" class="rounded-lg shadow-md w-full max-w-xs mx-auto"><br>
+        <img src="tt4.jpg" alt="Game Result Screenshot" class="rounded-lg shadow-md w-full max-w-xs mx-auto">
+
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🧰 Tech Stack</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+        <li><strong>No frameworks used:</strong> Built from scratch</li>
+        <li><strong>Hosting:</strong> TiinyHost / GitHub Pages</li>
+      </ul>
+    </section>
+
+    <!-- Key Highlights -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🎯 Key Highlights</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Pure JavaScript logic with condition checks</li>
+        <li>Responsive layout for different devices</li>
+        <li>Basic but effective user experience</li>
+        <li>Great starter project for beginners in JS</li>
+      </ul>
+    </section>
+
+    <!-- GitHub Button -->
+    <section data-aos="fade-up" class="text-center">
+      <a href="https://github.com/JahnaviPonna/tic-tac-toe-app" target="_blank"
+        class="inline-block bg-[var(--accent)] text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-pink-700 transition">
+        🔗 View on GitHub <i class="fab fa-github ml-2"></i>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--accent)] text-white text-center py-4 mt-16">
+    <p>© 2025 Ponna Jahnavi Sushma Priya</p>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

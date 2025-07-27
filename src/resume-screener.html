@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Screening Assistant | Project</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+    :root {
+      --bg: #FFF8F0;
+      --primary: #A53860;
+      --secondary: #F9DBBD;
+      --text: #2B2B2B;
+    }
+  </style>
+</head>
+
+<body class="bg-[var(--bg)] text-[var(--text)] font-sans">
+
+  <!-- Header -->
+  <header class="bg-[var(--primary)] text-white py-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Resume Screener</h1>
+      <a href="index.html" class="text-white underline hover:text-yellow-100">← Back to Portfolio</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-16 space-y-16">
+
+    <!-- Project Intro -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6">📄 Resume Screening Assistant</h2>
+      <p class="text-lg leading-relaxed">
+        The Resume Screening Assistant is an AI-powered application that helps recruiters and organizations quickly analyze and rank a batch of resumes against a given job description. By leveraging natural language processing and machine learning techniques, it saves hours of manual effort in hiring processes.
+      </p>
+    </section>
+
+    <!-- What It Does -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🔧 What It Does</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Reads and extracts text from multiple resumes (PDF format)</li>
+        <li>Compares resumes with a given job description</li>
+        <li>Uses BERT-based sentence embeddings to calculate similarity</li>
+        <li>Ranks resumes by relevance and outputs top candidates</li>
+        <li>Provides a visual chart of matching scores</li>
+      </ul>
+    </section>
+
+    <!-- How It Works -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">⚙️ How It Works</h2>
+      <ol class="list-decimal list-inside text-lg space-y-2">
+        <li>User uploads multiple PDF resumes into the system.</li>
+        <li>The job description is entered as input by the recruiter.</li>
+        <li>Text is extracted using <code>PyPDF2</code>.</li>
+        <li>Each resume and the JD are converted into embeddings using <code>sentence-transformers</code>.</li>
+        <li>Cosine similarity is computed to score how well each resume matches the JD.</li>
+        <li>Results are sorted, ranked, and visualized with <code>matplotlib</code>.</li>
+      </ol>
+
+      <!-- Optional Screenshot Placeholders -->
+      <div class="mt-8 space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">📥 Resume Upload Interface</h3>
+          <img src="resume2.jpg" alt="Resume Upload Screenshot" class="rounded-lg shadow-md w-full max-w-3xl mx-auto"/>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">📊 Match Scores Output</h3>
+          <img src="resume3.jpg" alt="Matching Scores Graph" class="rounded-lg shadow-md w-full max-w-3xl mx-auto"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🧰 Tech Stack</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li><strong>Languages:</strong> Python</li>
+        <li><strong>Libraries:</strong> PyPDF2, Sentence Transformers, Matplotlib, Pandas, FuzzyWuzzy</li>
+        <li><strong>Frontend:</strong> Streamlit / Flask (optional UI)</li>
+        <li><strong>Model:</strong> BERT embeddings from SentenceTransformers</li>
+        <li><strong>Deployment:</strong> Localhost or Streamlit Sharing</li>
+      </ul>
+    </section>
+
+    <!-- Key Highlights -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🎯 Key Highlights</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Fast and accurate resume matching using NLP</li>
+        <li>Automated candidate ranking</li>
+        <li>PDF parsing and processing pipeline</li>
+        <li>Visual insights for match score analysis</li>
+        <li>Highly extendable for ATS integration</li>
+      </ul>
+    </section>
+
+    <!-- GitHub Link -->
+    <section data-aos="fade-up" class="text-center">
+      <a href="https://github.com/JahnaviPonna/resume-screening-assistant" target="_blank"
+        class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-pink-700 transition">
+        🔗 View on GitHub <i class="fab fa-github ml-2"></i>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--primary)] text-white text-center py-4 mt-16">
+    <p>© 2025 Ponna Jahnavi Sushma Priya</p>
+  </footer>
+
+  <!-- AOS -->
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

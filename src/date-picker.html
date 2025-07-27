@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recurring Date Picker | Project</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    :root {
+      --bg-light: #FFF8F0;
+      --accent: #DA627D;
+      --text-dark: #3D2C2E;
+    }
+  </style>
+</head>
+
+<body class="bg-[var(--bg-light)] text-[var(--text-dark)] font-sans">
+
+  <!-- Header -->
+  <header class="bg-[var(--accent)] text-white py-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Recurring Date Picker</h1>
+      <a href="index.html" class="text-white underline hover:text-yellow-100">← Back to Portfolio</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-16 space-y-16">
+
+    <!-- Project Intro -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6">🗓️ Recurring Date Picker</h2>
+      <p class="text-lg leading-relaxed">
+        A fully customizable and reusable date picker component that allows users to select recurring dates for events, reminders, or tasks. Built with pure JavaScript and styled using Tailwind CSS.
+      </p>
+    </section>
+
+    <!-- What It Does -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🔧 What It Does</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Selects single dates or recurring weekly/monthly dates</li>
+        <li>Calendar-based visual date selection interface</li>
+        <li>Dynamically displays and manages recurring selections</li>
+        <li>Validates selections and supports deletion</li>
+      </ul>
+    </section>
+
+    <!-- How It Works -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🖼️ How It Works – Screenshots</h2>
+
+      <!-- Screenshot 1 -->
+      <div class="mb-10">
+        <h3 class="text-xl font-bold mb-2">1️⃣ Date Picker UI</h3>
+        <p class="text-md mb-2">Initial interface showing calendar and toggle options.</p>
+        <img src="rdp1.jpg" alt="Date Picker UI" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div>
+
+      <!-- Screenshot 2 -->
+      <div class="mb-10">
+        <h3 class="text-xl font-bold mb-2">2️⃣ Weekly/Monthly Options</h3>
+        <p class="text-md mb-2">User selects recurring frequency (e.g., every Monday).</p>
+        <img src="rdp2.jpg" alt="Recurring Options UI" class="rounded-lg shadow-md w-full max-w-3xl mx-auto"><br>
+        <img src="rdp4.jpg" alt="Recurring Options UI" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div>
+
+      <!-- Screenshot 3 -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">3️⃣ Final Output Preview</h3>
+        <p class="text-md mb-2">Displays selected and formatted dates in summary list.</p>
+        <img src="rdp3.jpg" alt="Output Preview Screenshot" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+        <br>
+        <img src="rdp5.jpg" alt="Recurring Options UI" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🧰 Tech Stack</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li><strong>Frontend:</strong> HTML, CSS, Tailwind CSS, JavaScript</li>
+        <li><strong>No frameworks:</strong> Pure vanilla JavaScript</li>
+        <li><strong>Reusable:</strong> Component for forms and schedulers</li>
+      </ul>
+    </section>
+
+    <!-- Key Highlights -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🎯 Key Highlights</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Lightweight and framework-free implementation</li>
+        <li>Highly reusable and customizable in web forms</li>
+        <li>Built with accessibility and responsiveness in mind</li>
+      </ul>
+    </section>
+
+    <!-- GitHub Button -->
+    <section data-aos="fade-up" class="text-center">
+      <a href="https://github.com/JahnaviPonna/recurring-date-picker-js" target="_blank"
+        class="inline-block bg-[var(--accent)] text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-pink-700 transition">
+        🔗 View on GitHub <i class="fab fa-github ml-2"></i>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--accent)] text-white text-center py-4 mt-16">
+    <p>© 2025 Ponna Jahnavi Sushma Priya</p>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot | Project</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    :root {
+      --bg-light: #FFF8F0;
+      --accent: #DA627D;
+      --text-dark: #3D2C2E;
+    }
+  </style>
+</head>
+
+<body class="bg-[var(--bg-light)] text-[var(--text-dark)] font-sans">
+
+  <!-- Header -->
+  <header class="bg-[var(--accent)] text-white py-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">AI Chatbot</h1>
+      <a href="index.html" class="text-white underline hover:text-yellow-100">← Back to Portfolio</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-16 space-y-16">
+
+    <!-- Intro -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6">🤖 AI Chatbot</h2>
+      <p class="text-lg leading-relaxed">
+        An intelligent conversational assistant built with <strong>Gemini 1.5 Pro API</strong> and Flask. This chatbot provides natural, human-like interactions, ideal for learning how to connect frontend interfaces with large language models (LLMs).
+      </p>
+    </section>
+
+    <!-- What It Does -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🔧 What It Does</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Takes user input in a chatbox format</li>
+        <li>Sends queries to Gemini API via Flask backend</li>
+        <li>Receives real-time intelligent responses</li>
+        <li>Displays replies in a chat bubble interface</li>
+      </ul>
+    </section>
+
+    <!-- How It Works -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🖼️ How It Works – Screenshots</h2>
+
+      <!-- Screenshot 1 -->
+      <div class="mb-10">
+        <h3 class="text-xl font-bold mb-2">1️⃣ Chat UI Input</h3>
+        <p class="text-md mb-2">User types a message in the chatbot interface.</p>
+        <img src="chat_ui.png" alt="Chat UI Screenshot" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div>
+
+      <!-- Screenshot 2 -->
+      <div class="mb-10">
+        <h3 class="text-xl font-bold mb-2">2️⃣ Gemini Response</h3>
+        <p class="text-md mb-2">The chatbot responds based on Gemini API’s output.</p>
+        <img src="chat_response.png" alt="Response Screenshot" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div>
+
+      <!-- Screenshot 3 -->
+      <div>
+        <h3 class="text-xl font-bold mb-2">3️⃣ Interactive Session</h3>
+        <p class="text-md mb-2">Continues conversation in a fluid, human-like way.</p>
+        <img src="chat_convo.png" alt="Conversation Screenshot" class="rounded-lg shadow-md w-full max-w-3xl mx-auto">
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🧰 Tech Stack</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li><strong>Frontend:</strong> HTML, CSS, Tailwind CSS, JavaScript</li>
+        <li><strong>Backend:</strong> Python (Flask)</li>
+        <li><strong>API:</strong> Gemini-1.5-Pro API (Google Generative AI)</li>
+        <li><strong>Hosting:</strong> Localhost / Render</li>
+      </ul>
+    </section>
+
+    <!-- Key Highlights -->
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">🎯 Key Highlights</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li>Real-time conversation using Gemini API</li>
+        <li>Responsive, mobile-friendly UI</li>
+        <li>Custom error handling and empty input detection</li>
+        <li>Clear display of both user and bot messages</li>
+      </ul>
+    </section>
+
+    <!-- GitHub Button -->
+    <section data-aos="fade-up" class="text-center">
+      <a href="https://github.com/JahnaviPonna/chatbot-ai" target="_blank"
+        class="inline-block bg-[var(--accent)] text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-pink-700 transition">
+        🔗 View on GitHub <i class="fab fa-github ml-2"></i>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--accent)] text-white text-center py-4 mt-16">
+    <p>© 2025 Ponna Jahnavi Sushma Priya</p>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
