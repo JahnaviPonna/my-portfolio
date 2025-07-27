@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ponna Jahnavi | Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link href="dist/output.css" rel="stylesheet">
+
+  <!-- Custom Colors -->
+  <style>
+    :root {
+      --peach: #F9DBBD;
+      --pink: #FFA5AB;
+      --rose: #DA627D;
+      --raspberry: #A53860;
+      --burgundy: #450920;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-900" style="background-color: var(--peach);">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 shadow-md" style="background-color: var(--burgundy); color: white;">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">P Jahnavi Sushma Priya</h1>
+      <nav class="space-x-6 text-base">
+        <a href="#about" class="hover:text-[var(--pink)]">About</a>
+        <a href="#skills" class="hover:text-[var(--pink)]">Skills</a>
+        <a href="#projects" class="hover:text-[var(--pink)]">Projects</a>
+        <a href="#experience" class="hover:text-[var(--pink)]">Experience</a>
+        <a href="#achievements" class="hover:text-[var(--pink)]">Achievements</a>
+        <a href="#contact" class="hover:text-[var(--pink)]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero + About Section -->
+  <section id="about" class="py-24 px-6 text-center" style="background-color: var(--pink);">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-5xl font-extrabold mb-4 leading-tight text-[var(--burgundy)]">
+          Hi, I'm <span style="color: var(--raspberry)">Jahnavi</span>
+        </h2>
+        <p class="text-lg mb-6 text-[var(--burgundy)]">
+          I’m a passionate Web Developer and UI/UX Designer who loves building impactful, creative, and intelligent digital experiences. I specialize in crafting seamless web interfaces, integrating AI features, and delivering beautiful, user-centric solutions with real-world impact.
+        </p>
+      </div>
+      <div data-aos="fade-left" class="flex justify-center">
+        <img src="my_img.jpg" alt="Profile" class="w-64 h-64 rounded-full border-4 border-[var(--rose)] shadow-lg object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24" style="background-color: var(--peach);">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-16 text-[var(--burgundy)]">Skills</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-lg shadow-md bg-[var(--pink)] hover:bg-[var(--rose)] transition transform hover:-translate-y-2">
+          <h4 class="font-bold text-center text-[var(--burgundy)]">Languages</h4>
+          <p class="text-center text-sm">Python, C++, Java, HTML, CSS, JavaScript, R</p>
+        </div>
+        <div class="p-6 rounded-lg shadow-md bg-[var(--pink)] hover:bg-[var(--rose)] transition transform hover:-translate-y-2">
+          <h4 class="font-bold text-center text-[var(--burgundy)]">Frameworks / Libraries</h4>
+          <p class="text-center text-sm">React, Flask, Bootstrap, Tailwind, Node.js</p>
+        </div>
+        <div class="p-6 rounded-lg shadow-md bg-[var(--pink)] hover:bg-[var(--rose)] transition transform hover:-translate-y-2">
+          <h4 class="font-bold text-center text-[var(--burgundy)]">Tools & Platforms</h4>
+          <p class="text-center text-sm">Git, VS Code, Figma, MySQL, Oracle SQL, MS Office 365</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24" style="background-color: var(--rose); color: white;">
+  <div class="max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-16">Projects</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Resume Screening Assistant -->
+      <div class="relative group">
+      <!-- Card Link -->
+      <a href="resume-screener.html" class="block group-hover:opacity-90">
+        <div class="p-6 bg-[var(--raspberry)] hover:bg-[var(--burgundy)] transform hover:-translate-y-2 transition rounded-lg shadow-lg">
+          <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" class="w-14 mb-3" />
+          <h4 class="text-xl font-bold mb-2">Resume Screening Assistant</h4>
+          <p class="mb-4 text-sm">Ranks resumes using ML & BERT with sentence embeddings.</p>
+        </div>
+      </a>
+
+      <!-- GitHub Icon Link -->
+      <a href="https://github.com/JahnaviPonna/resume-screening-assistant" target="_blank" 
+        class="absolute top-4 right-4 text-xl text-white hover:text-[var(--pink)] z-10">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+
+      <!-- AI Recipe Generator -->
+      <div class="relative group">
+      <!-- Entire card is clickable except GitHub icon -->
+      <a href="recipe-generator.html" class="block group-hover:opacity-90">
+        <div class="p-6 bg-[var(--raspberry)] hover:bg-[var(--burgundy)] transform hover:-translate-y-2 transition rounded-lg shadow-lg">
+          <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" class="w-14 mb-3" />
+          <h4 class="text-xl font-bold mb-2">AI Recipe Generator</h4>
+          <p class="mb-4 text-sm">Suggests intelligent recipes using Gemini API and Flask.</p>
+        </div>
+      </a>
+
+      <!-- GitHub Icon — works separately -->
+      <a href="https://github.com/JahnaviPonna/ai-recipe-maker" target="_blank" 
+        class="absolute top-4 right-4 text-xl text-white hover:text-[var(--pink)] z-10">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+
+      <!-- AI Chatbot -->
+      <div class="relative group">
+        <!-- Card Link -->
+        <a href="ai-chatbot.html" class="block group-hover:opacity-90">
+          <div class="p-6 bg-[var(--raspberry)] hover:bg-[var(--burgundy)] transform hover:-translate-y-2 transition rounded-lg shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712054.png" class="w-14 mb-3" />
+            <h4 class="text-xl font-bold mb-2">AI Chatbot</h4>
+            <p class="mb-4 text-sm">Conversational bot powered by Gemini API and Flask backend.</p>
+          </div>
+        </a>
+
+        <!-- GitHub Icon Link -->
+        <a href="https://github.com/JahnaviPonna/chatbot-ai" target="_blank"
+          class="absolute top-4 right-4 text-xl text-white hover:text-[var(--pink)] z-10">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <!-- Tic Tac Toe App -->
+      <div class="relative group">
+        <!-- Card Link -->
+        <a href="tic-tac-toe.html" class="block group-hover:opacity-90">
+          <div class="p-6 bg-[var(--raspberry)] hover:bg-[var(--burgundy)] transform hover:-translate-y-2 transition rounded-lg shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/512/861/861512.png" class="w-14 mb-3" />
+            <h4 class="text-xl font-bold mb-2">Tic Tac Toe App</h4>
+            <p class="mb-4 text-sm">Classic 2-player game built using HTML, CSS, and JavaScript.</p>
+          </div>
+        </a>
+
+        <!-- GitHub Icon Link -->
+        <a href="https://github.com/JahnaviPonna/tic-tac-toe-app" target="_blank"
+          class="absolute top-4 right-4 text-xl text-white hover:text-[var(--pink)] z-10">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <!-- Recurring Date Picker -->
+      <div class="relative group">
+        <!-- Card Link -->
+        <a href="date-picker.html" class="block group-hover:opacity-90">
+          <div class="p-6 bg-[var(--raspberry)] hover:bg-[var(--burgundy)] transform hover:-translate-y-2 transition rounded-lg shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" class="w-14 mb-3" />
+            <h4 class="text-xl font-bold mb-2">Recurring Date Picker</h4>
+            <p class="mb-4 text-sm">Custom calendar for recurring date selection built with JS.</p>
+          </div>
+        </a>
+
+        <!-- GitHub Icon Link -->
+        <a href="https://github.com/JahnaviPonna/recurring-date-picker-js" target="_blank"
+          class="absolute top-4 right-4 text-xl text-white hover:text-[var(--pink)] z-10">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+
+      <!-- PulseFit -->
+      <div class="relative group">
+      <!-- Card Link -->
+      <a href="pulsefit.html" class="block group-hover:opacity-90">
+        <div class="p-6 bg-[var(--raspberry)] hover:bg-[var(--burgundy)] transform hover:-translate-y-2 transition rounded-lg shadow-lg">
+          <img src="https://cdn-icons-png.flaticon.com/512/4760/4760872.png" alt="Fitness Icon" class="w-14 mb-3" />
+          <h4 class="text-xl font-bold mb-2">PulseFit – Fitness Landing Page</h4>
+          <p class="mb-4 text-sm">Responsive homepage clone for a fitness platform using Tailwind CSS.</p>
+        </div>
+      </a>
+
+      <!-- GitHub Icon Link -->
+      <a href="https://github.com/JahnaviPonna/pulsefit-page" target="_blank"
+        class="absolute top-4 right-4 text-xl text-white hover:text-[var(--pink)] z-10">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Experience -->
+  <section id="experience" class="py-24" style="background-color: var(--peach);">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12 text-[var(--burgundy)]">Experience</h3>
+      <div class="space-y-6">
+        <div class="bg-[var(--pink)] p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold text-[var(--burgundy)]">Chief Strategy Officer – EcoTech Innovations</h4>
+          <p class="text-sm mt-2">Led AI-powered renewable tech and sustainability strategy.</p>
+        </div>
+        <div class="bg-[var(--pink)] p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold text-[var(--burgundy)]">Technical Team Head – IEEE SBC, VIT-AP</h4>
+          <p class="text-sm mt-2">Organized technical events and mentored peers in web/AI dev.</p>
+        </div>
+        <div class="bg-[var(--pink)] p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold text-[var(--burgundy)]">Web Developer Intern – OctaNet</h4>
+          <p class="text-sm mt-2">Built a responsive To-Do List app using HTML/CSS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="py-20 text-center" style="background-color: var(--pink);">
+    <h3 class="text-3xl font-bold mb-4 text-[var(--burgundy)]">Achievements</h3>
+    <ul class="text-[var(--burgundy)] text-lg space-y-2 max-w-2xl mx-auto">
+      <li>🏆 Student Academic Merit Award (2023-24) – VIT-AP</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 text-center" style="background-color: var(--rose); color: white;">
+    <h3 class="text-3xl font-bold mb-4">Let's Connect</h3>
+    <p class="text-lg mb-6">📧 jahnavispponna@gmail.com</p>
+    <div class="space-x-6 text-2xl">
+      <a href="https://linkedin.com/in/jahnavi-sushma-priya-p/" class="hover:text-[var(--pink)]"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/JahnaviPonna" class="hover:text-[var(--pink)]"><i class="fab fa-github"></i></a>
+      <a href="mailto:jahnavispponna@gmail.com" class="hover:text-[var(--pink)]"><i class="fas fa-envelope"></i></a>
+      <a href="https://instagram.com/jahnavi._.p04" class="hover:text-[var(--rose)]">
+      <i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6" style="background-color: var(--burgundy); color: white;">
+    <p>© 2025 Ponna Jahnavi Sushma Priya</p>
+  </footer>
+
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+
+</body>
+</html>
