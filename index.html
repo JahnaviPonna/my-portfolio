@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Ponna Jahnavi Sushma Priya — Full-Stack Developer & AI Engineer. Final-year CS student at VIT-AP with CGPA 9.18, Dept. Rank 9th." />
+<title>Jahnavi Ponna | Full-Stack Developer & AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #050510;
+  --surface: #0b0b1e;
+  --surface2: #10102a;
+  --border: rgba(255,255,255,0.06);
+  --border-glow: rgba(124,108,255,0.35);
+  --text: #eeeeff;
+  --muted: rgba(220,220,255,0.48);
+  --muted2: rgba(220,220,255,0.28);
+  --a1: #7c6cff;
+  --a2: #b06cff;
+  --a3: #ff6cb8;
+  --a4: #6cddff;
+  --grad: linear-gradient(135deg, #7c6cff 0%, #b06cff 50%, #ff6cb8 100%);
+  --grad2: linear-gradient(135deg, #6cddff 0%, #7c6cff 100%);
+  --glass: rgba(255,255,255,0.035);
+  --glass-b: rgba(255,255,255,0.07);
+  --r: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --fd: 'Space Grotesk', sans-serif;
+  --fb: 'Inter', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--fb); font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+
+/* ── BLOBS ── */
+.blob { position: fixed; border-radius: 50%; filter: blur(130px); opacity: 0.15; pointer-events: none; z-index: 0; animation: bdrift 22s ease-in-out infinite alternate; }
+.b1 { width: 700px; height: 700px; background: #7c6cff; top: -250px; left: -200px; }
+.b2 { width: 550px; height: 550px; background: #ff6cb8; bottom: -150px; right: -180px; animation-delay: -9s; }
+.b3 { width: 420px; height: 420px; background: #6cddff; top: 38%; left: 35%; animation-delay: -16s; opacity: 0.1; }
+@keyframes bdrift { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(50px,35px) scale(1.1); } }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 0 48px; height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  backdrop-filter: blur(24px) saturate(160%);
+  background: rgba(5,5,16,0.75);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: var(--fd); font-size: 18px; font-weight: 700; letter-spacing: -0.5px;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 8px; list-style: none; }
+.nav-links a {
+  padding: 6px 14px; border-radius: 100px;
+  color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 500;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color: var(--text); background: var(--glass); }
+.nav-right { display: flex; gap: 12px; align-items: center; }
+.nav-gh {
+  display: flex; align-items: center; gap: 7px;
+  color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500;
+  padding: 7px 14px; border-radius: 100px; border: 1px solid var(--glass-b);
+  transition: border-color 0.2s, color 0.2s;
+}
+.nav-gh:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.nav-gh svg { width: 16px; height: 16px; }
+.nav-resume {
+  padding: 8px 20px; border-radius: 100px;
+  background: var(--grad); color: #fff; font-size: 13.5px; font-weight: 600;
+  text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 2px 16px rgba(124,108,255,0.3);
+}
+.nav-resume:hover { opacity: 0.85; transform: translateY(-1px); }
+
+/* ── LAYOUT ── */
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 48px; }
+.sec { position: relative; z-index: 1; padding: 110px 0; }
+.sec-alt { background: var(--surface); }
+.divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); position: relative; z-index: 1; }
+
+/* ── SECTION HEADER ── */
+.sh { text-align: center; margin-bottom: 72px; }
+.sh-eye {
+  display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 14px;
+}
+.sh h2 { font-family: var(--fd); font-size: clamp(34px,5vw,56px); font-weight: 700; line-height: 1.05; letter-spacing: -1.5px; }
+.sh p { font-size: 17px; color: var(--muted); margin-top: 16px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.75; }
+
+/* ── HERO ── */
+#hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 48px 80px; text-align: center; }
+
+.hero-avail {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 9px 20px; border-radius: 100px;
+  background: var(--glass); border: 1px solid var(--glass-b);
+  font-size: 13px; color: var(--muted); font-weight: 500;
+  margin-bottom: 36px; backdrop-filter: blur(16px);
+  animation: fu 0.8s ease both;
+}
+.dot-green { width: 7px; height: 7px; border-radius: 50%; background: #4dffaa; animation: glow 2s ease infinite; flex-shrink: 0; }
+@keyframes glow { 0%,100% { box-shadow: 0 0 0 0 rgba(77,255,170,0.6); } 50% { box-shadow: 0 0 0 5px rgba(77,255,170,0); } }
+
+.hero-name {
+  font-family: var(--fd);
+  font-size: clamp(52px, 9vw, 108px);
+  font-weight: 700; line-height: 0.95; letter-spacing: -3px;
+  margin-bottom: 10px;
+  animation: fu 0.8s 0.1s ease both;
+}
+.hero-name .g { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+.hero-role {
+  font-size: clamp(16px, 2.5vw, 22px); color: var(--muted); font-weight: 400;
+  margin-bottom: 10px; animation: fu 0.8s 0.18s ease both;
+}
+
+.hero-sub {
+  font-size: 14px; color: var(--muted2); font-weight: 500; letter-spacing: 0.03em;
+  margin-bottom: 32px; animation: fu 0.8s 0.24s ease both;
+}
+.hero-sub span { color: var(--a1); }
+
+.hero-desc {
+  font-size: 17px; color: var(--muted); max-width: 580px; margin: 0 auto 44px;
+  line-height: 1.8; animation: fu 0.8s 0.3s ease both;
+}
+
+.hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; animation: fu 0.8s 0.38s ease both; }
+.btn-p {
+  padding: 15px 36px; border-radius: 100px;
+  background: var(--grad); color: #fff; font-size: 15px; font-weight: 700;
+  text-decoration: none; box-shadow: 0 4px 28px rgba(124,108,255,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-p:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(124,108,255,0.55); }
+.btn-s {
+  padding: 15px 36px; border-radius: 100px;
+  background: var(--glass); border: 1px solid var(--glass-b);
+  color: var(--text); font-size: 15px; font-weight: 600;
+  text-decoration: none; backdrop-filter: blur(12px);
+  transition: background 0.2s, border-color 0.2s;
+}
+.btn-s:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); }
+
+.hero-stats { display: flex; gap: 0; margin-top: 72px; animation: fu 0.8s 0.46s ease both; border: 1px solid var(--glass-b); border-radius: var(--r-lg); overflow: hidden; backdrop-filter: blur(16px); background: var(--glass); }
+.hstat { padding: 28px 44px; text-align: center; flex: 1; border-right: 1px solid var(--glass-b); }
+.hstat:last-child { border-right: none; }
+.hstat-num { font-family: var(--fd); font-size: 38px; font-weight: 700; line-height: 1; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hstat-lbl { font-size: 11.5px; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 6px; }
+
+.scroll-ind { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--muted2); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; animation: fu 1s 1s ease both; }
+.scroll-line { width: 1px; height: 52px; background: linear-gradient(to bottom, transparent, var(--muted2)); animation: sl 2.2s ease-in-out infinite; }
+@keyframes sl { 0%,100%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform-origin:bottom} }
+@keyframes fu { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── ABOUT ── */
+.about-grid { display: grid; grid-template-columns: 420px 1fr; gap: 80px; align-items: center; }
+.about-photo-wrap { position: relative; }
+.photo-ring { width: 340px; height: 340px; border-radius: 50%; background: var(--grad); padding: 3px; margin: 0 auto; animation: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.photo-inner { width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: var(--surface2); }
+.photo-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-fallback { width:100%;height:100%;border-radius:50%;background:var(--surface2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted);font-size:13px; }
+
+.about-chip {
+  position: absolute; padding: 14px 20px; border-radius: var(--r);
+  background: rgba(13,13,31,0.85); border: 1px solid var(--glass-b);
+  backdrop-filter: blur(20px);
+}
+.ac1 { bottom: 20px; right: -10px; }
+.ac2 { top: 30px; right: -20px; }
+.ac-val { font-family: var(--fd); font-size: 22px; font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ac-sub { font-size: 11px; color: var(--muted2); margin-top: 2px; }
+
+.about-text .eye { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 14px; display: block; }
+.about-text h3 { font-family: var(--fd); font-size: clamp(28px,3.5vw,40px); font-weight: 700; line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px; }
+.about-text p { color: var(--muted); line-height: 1.82; margin-bottom: 14px; font-size: 15.5px; }
+
+.about-edu { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+.edu-row { display: flex; align-items: flex-start; gap: 14px; padding: 16px 20px; border-radius: var(--r); background: var(--glass); border: 1px solid var(--glass-b); }
+.edu-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.edu-info { flex: 1; }
+.edu-degree { font-size: 13.5px; font-weight: 700; color: var(--text); }
+.edu-school { font-size: 12.5px; color: var(--a1); font-weight: 600; margin-top: 2px; }
+.edu-detail { font-size: 12px; color: var(--muted2); margin-top: 3px; }
+
+.about-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.pill { padding: 7px 16px; border-radius: 100px; background: var(--glass); border: 1px solid var(--glass-b); font-size: 13px; color: var(--text); font-weight: 500; }
+
+/* ── SKILLS ── */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.sk-card { padding: 28px; border-radius: var(--r-lg); background: var(--glass); border: 1px solid var(--glass-b); transition: border-color 0.3s, transform 0.3s; }
+.sk-card:hover { border-color: var(--border-glow); transform: translateY(-5px); }
+.sk-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--grad); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+.sk-card h4 { font-family: var(--fd); font-size: 15px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+.sk-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.sk-tag { padding: 4px 13px; border-radius: 100px; background: rgba(124,108,255,0.1); border: 1px solid rgba(124,108,255,0.2); font-size: 12px; color: #aba4ff; font-weight: 500; }
+.sk-tag-b { background: rgba(108,221,255,0.08); border-color: rgba(108,221,255,0.2); color: #7ddcff; }
+.sk-tag-c { background: rgba(255,108,184,0.08); border-color: rgba(255,108,184,0.2); color: #ff9ed4; }
+.sk-tag-d { background: rgba(77,255,170,0.08); border-color: rgba(77,255,170,0.2); color: #4dffaa; }
+.sk-tag-e { background: rgba(255,200,80,0.08); border-color: rgba(255,200,80,0.2); color: #ffc850; }
+
+/* ── PROJECTS ── */
+.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.pc { border-radius: var(--r-lg); background: var(--surface2); border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit; }
+.pc:hover { border-color: rgba(124,108,255,0.4); transform: translateY(-6px); box-shadow: 0 24px 64px rgba(124,108,255,0.14); }
+.pc-feat { grid-column: span 2; display: grid; grid-template-columns: 1.1fr 1fr; }
+.pc-feat .pc-thumb { min-height: 280px; }
+.pc-thumb { height: 210px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.pc-thumb-bg { position: absolute; inset: 0; }
+.pc-thumb-icon { font-size: 52px; position: relative; z-index: 1; }
+.pc-body { padding: 26px 28px; display: flex; flex-direction: column; flex: 1; }
+.pc-feat .pc-body { padding: 36px 40px; justify-content: center; }
+.pc-cats { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.pc-cat { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; background: rgba(124,108,255,0.1); color: #aba4ff; border: 1px solid rgba(124,108,255,0.2); }
+.pc h3 { font-family: var(--fd); font-size: 19px; font-weight: 700; margin-bottom: 10px; line-height: 1.25; }
+.pc-feat h3 { font-size: 26px; }
+.pc p { font-size: 13.5px; color: var(--muted); line-height: 1.75; flex: 1; margin-bottom: 20px; }
+.pc-feat p { font-size: 15px; }
+.pc-stack { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+.pc-tech { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px; background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border); }
+.pc-links { display: flex; gap: 16px; margin-top: auto; }
+.pc-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--a1); text-decoration: none; transition: color 0.2s; }
+.pc-link:hover { color: var(--a3); }
+.pc-link svg { width: 13px; height: 13px; }
+.pc-link-ext { color: var(--a4); }
+.pc-link-ext:hover { color: #fff; }
+
+/* ── EXPERIENCE ── */
+.xp-wrap { max-width: 780px; margin: 0 auto; }
+.xp-item { display: grid; grid-template-columns: 200px 1fr; gap: 40px; margin-bottom: 56px; position: relative; }
+.xp-item::after { content: ''; position: absolute; right: 0; top: 0; bottom: -56px; left: 200px; margin-left: -1px; width: 1px; background: linear-gradient(to bottom, var(--border-glow), transparent); display: none; }
+.xp-left { text-align: right; padding-top: 4px; }
+.xp-period { font-size: 12.5px; font-weight: 700; color: var(--a1); letter-spacing: 0.04em; margin-bottom: 6px; }
+.xp-loc { font-size: 12px; color: var(--muted2); }
+.xp-right { padding: 28px 32px; border-radius: var(--r-lg); background: var(--glass); border: 1px solid var(--glass-b); transition: border-color 0.3s; position: relative; }
+.xp-right:hover { border-color: var(--border-glow); }
+.xp-right::before { content: ''; position: absolute; left: -41px; top: 34px; width: 10px; height: 10px; border-radius: 50%; background: var(--grad); border: 2px solid var(--bg); box-shadow: 0 0 0 4px rgba(124,108,255,0.25); }
+.xp-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; background: rgba(124,108,255,0.1); color: var(--a1); border: 1px solid rgba(124,108,255,0.2); margin-bottom: 12px; }
+.xp-right h3 { font-family: var(--fd); font-size: 19px; font-weight: 700; margin-bottom: 4px; }
+.xp-org { font-size: 14px; color: var(--a2); font-weight: 700; margin-bottom: 16px; }
+.xp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.xp-bullets li { font-size: 14px; color: var(--muted); line-height: 1.7; padding-left: 18px; position: relative; }
+.xp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--a1); font-size: 11px; top: 3px; }
+.xp-stack { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.xp-tech { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px; background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border); }
+.xp-connector { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--border-glow), transparent); margin: -20px 0 -20px 200px; padding-left: 40px; position: relative; z-index: 2; display: none; }
+
+/* ── EDUCATION ── */
+.edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.edu-card { padding: 30px 26px; border-radius: var(--r-lg); background: var(--glass); border: 1px solid var(--glass-b); transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; }
+.edu-card:hover { border-color: var(--border-glow); transform: translateY(-4px); }
+.edu-badge-type { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; background: rgba(124,108,255,0.1); color: var(--a1); border: 1px solid rgba(124,108,255,0.2); display: inline-block; margin-bottom: 16px; align-self: flex-start; }
+.edu-card h3 { font-family: var(--fd); font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
+.edu-card .inst { font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 6px; }
+.edu-card .period { font-size: 12px; color: var(--muted2); margin-bottom: 16px; }
+.edu-highlight { margin-top: auto; padding: 12px 16px; border-radius: 10px; background: rgba(124,108,255,0.08); border: 1px solid rgba(124,108,255,0.15); }
+.edu-hl-val { font-family: var(--fd); font-size: 22px; font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+.edu-hl-sub { font-size: 11px; color: var(--muted2); margin-top: 4px; }
+
+/* ── CERTIFICATIONS ── */
+.cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; max-width: 820px; margin: 0 auto; }
+.cert-card { display: flex; align-items: flex-start; gap: 16px; padding: 22px 24px; border-radius: var(--r); background: var(--glass); border: 1px solid var(--glass-b); transition: border-color 0.3s, transform 0.2s; }
+.cert-card:hover { border-color: var(--border-glow); transform: translateY(-3px); }
+.cert-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--grad); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.cert-info h4 { font-size: 13.5px; font-weight: 700; line-height: 1.35; margin-bottom: 4px; }
+.cert-info span { font-size: 12px; color: var(--a1); font-weight: 600; }
+
+/* ── ACHIEVEMENTS ── */
+.ach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.ach-card { padding: 30px 26px; border-radius: var(--r-lg); background: var(--glass); border: 1px solid var(--glass-b); text-align: center; transition: border-color 0.3s, transform 0.3s; }
+.ach-card:hover { border-color: rgba(124,108,255,0.4); transform: translateY(-5px); }
+.ach-icon { font-size: 44px; margin-bottom: 18px; display: block; }
+.ach-card h4 { font-family: var(--fd); font-size: 16px; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+.ach-card p { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+
+/* ── CONTACT ── */
+.contact-box { max-width: 720px; margin: 0 auto; }
+.contact-inner { padding: 56px 64px; border-radius: var(--r-xl); background: var(--glass); border: 1px solid var(--glass-b); backdrop-filter: blur(20px); text-align: center; }
+.contact-inner h3 { font-family: var(--fd); font-size: clamp(28px,4vw,44px); font-weight: 700; line-height: 1.1; letter-spacing: -1px; margin-bottom: 16px; }
+.contact-inner p { font-size: 16px; color: var(--muted); margin-bottom: 40px; line-height: 1.75; }
+.contact-email {
+  font-family: var(--fd); font-size: clamp(18px,3vw,28px); font-weight: 700;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  text-decoration: none; display: block; margin-bottom: 14px; transition: opacity 0.2s;
+}
+.contact-email:hover { opacity: 0.7; }
+.contact-phone { font-size: 14px; color: var(--muted2); margin-bottom: 40px; }
+.socials { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.soc {
+  display: flex; align-items: center; gap: 9px;
+  padding: 13px 24px; border-radius: 100px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--glass-b);
+  color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+.soc:hover { border-color: rgba(124,108,255,0.5); transform: translateY(-2px); background: rgba(124,108,255,0.08); }
+.soc svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* ── FOOTER ── */
+footer { text-align: center; padding: 36px 48px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted2); position: relative; z-index: 1; }
+footer a { color: var(--a1); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* ── REVEAL ── */
+.rv { opacity: 0; transform: translateY(36px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.rv.on { opacity: 1; transform: translateY(0); }
+.rv1 { transition-delay: 0.1s; }
+.rv2 { transition-delay: 0.2s; }
+.rv3 { transition-delay: 0.3s; }
+.rv4 { transition-delay: 0.4s; }
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .wrap { padding: 0 20px; }
+  #hero { padding: 100px 20px 72px; }
+  .hero-stats { flex-direction: column; gap: 0; }
+  .hstat { border-right: none; border-bottom: 1px solid var(--glass-b); padding: 20px 32px; }
+  .hstat:last-child { border-bottom: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .photo-ring { width: 260px; height: 260px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .proj-grid { grid-template-columns: 1fr; }
+  .pc-feat { grid-column: span 1; grid-template-columns: 1fr; }
+  .pc-feat .pc-thumb { min-height: 180px; height: 180px; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .ach-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .xp-item { grid-template-columns: 1fr; gap: 10px; }
+  .xp-left { text-align: left; }
+  .xp-right::before { display: none; }
+  .contact-inner { padding: 36px 24px; }
+  .sec { padding: 72px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob, .photo-ring, .rv { animation: none; transition: none; opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo" href="#">JAHNAVI.DEV</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="nav-gh" href="https://github.com/JahnaviPonna" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      GitHub
+    </a>
+    <a class="nav-resume" href="Jahnavi_Resume.pdf" target="_blank">Resume ↗</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero" style="position:relative;">
+  <div class="hero-avail">
+    <span class="dot-green"></span>
+    Open to full-time & internship opportunities · Final year · VIT-AP
+  </div>
+  <h1 class="hero-name">Jahnavi Sushma Priya <span class="g">Ponna</span></h1>
+  <p class="hero-role">Full-Stack Developer &amp; AI Engineer</p>
+  <p class="hero-sub">B.Tech CSE · <span>CGPA 9.18</span> · Dept. Rank 9th · VIT-AP University</p>
+  <p class="hero-desc">
+    I build production-ready web applications and AI-powered platforms with expertise in full-stack development, RAG architectures, machine learning, and responsive React interfaces.
+  </p>
+  <div class="hero-btns">
+    <a class="btn-p" href="#projects">View My Work</a>
+    <a class="btn-s" href="Jahnavi_Resume.pdf" target="_blank">Download Resume ↗</a>
+    <a class="btn-s" href="#contact">Let's Connect</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat">
+      <div class="hstat-num">9.18</div>
+      <div class="hstat-lbl">CGPA · Top 10</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-num">5+</div>
+      <div class="hstat-lbl">AI Projects</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-num">3×</div>
+      <div class="hstat-lbl">Merit Awards</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-num">Rank 9</div>
+      <div class="hstat-lbl">Dept. CS & BS</div>
+    </div>
+  </div>
+  <div class="scroll-ind">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo-wrap rv">
+        <div class="photo-ring">
+          <div class="photo-inner">
+            <img src="Jahnavi_Photo.jpg" alt="Jahnavi Ponna"
+              onerror="this.parentElement.innerHTML='<div class=photo-fallback><svg width=64 height=64 viewBox=\'0 0 24 24\' fill=none stroke=currentColor stroke-width=1><circle cx=12 cy=8 r=4/><path d=\'M4 20c0-4 3.6-7 8-7s8 3 8 7\'/></svg><span>Jahnavi Ponna</span></div>'" />
+          </div>
+        </div>
+        <div class="about-chip ac1">
+          <div class="ac-val">9.18 / 10</div>
+          <div class="ac-sub">CGPA · Dept. Rank 9th</div>
+        </div>
+        <div class="about-chip ac2">
+          <div class="ac-val">3× 🏆</div>
+          <div class="ac-sub">Academic Merit Award</div>
+        </div>
+      </div>
+
+      <div class="about-text rv rv1">
+        <span class="eye">Behind the Code</span>
+        <h3>Building AI Systems<br>That Solve Real<br>Problems</h3>
+        <p>Final-year Computer Science &amp; Business Systems student at VIT-AP, Amaravati, with a CGPA of <strong style="color:var(--text)">9.18</strong> and a departmental rank of <strong style="color:var(--text)">9th</strong> in CS &amp; Business Systems (2024–25).</p>
+        <p>I specialize in full-stack development and AI engineering — from RAG-based autonomous agents and NLP pipelines to production React UIs shipped within real Agile sprint cycles. I love owning features end-to-end, from API design to responsive interface.</p>
+        <p>Driven by a desire to build things that are intelligent, fast, and beautiful — not just in demos, but in real-world use.</p>
+
+        <div class="about-edu">
+          <div class="edu-row">
+            <span class="edu-icon">🎓</span>
+            <div class="edu-info">
+              <div class="edu-degree">B.Tech, Computer Science &amp; Business Systems</div>
+              <div class="edu-school">VIT-AP University, Amaravati</div>
+              <div class="edu-detail">Nov 2022 – Jun 2026 · CGPA: 9.18 · Rank: 9th in CS &amp; BS (2024–25)</div>
+            </div>
+          </div>
+          <div class="edu-row">
+            <span class="edu-icon">📚</span>
+            <div class="edu-info">
+              <div class="edu-degree">Class XII — MPC (98.1%)</div>
+              <div class="edu-school">Sasi Jr College, Tadepalligudem</div>
+              <div class="edu-detail">Jul 2020 – Jul 2022 · Board of Intermediate Education, AP</div>
+            </div>
+          </div>
+          <div class="edu-row">
+            <span class="edu-icon">🏫</span>
+            <div class="edu-info">
+              <div class="edu-degree">Class X (99.66%)</div>
+              <div class="edu-school">St. Xavier E.M School, Ibrahimpatnam</div>
+              <div class="edu-detail">Jun 2019 – Jun 2020 · Board of Secondary Education, AP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-pills">
+          <span class="pill">🏆 3× Academic Merit Award</span>
+          <span class="pill">⚡ React · FastAPI · RAG</span>
+          <span class="pill">📍 Guntur, Andhra Pradesh</span>
+          <span class="pill">✅ Open to Work</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ SKILLS ══ -->
+<section id="skills" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="sh-eye">My Arsenal</p>
+      <h2>Technical Proficiencies</h2>
+      <p>Full-stack capabilities spanning languages, AI/ML, databases, and developer tooling.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="sk-card rv">
+        <div class="sk-icon">💻</div>
+        <h4>Languages</h4>
+        <div class="sk-tags">
+          <span class="sk-tag">Python</span>
+          <span class="sk-tag">JavaScript</span>
+          <span class="sk-tag">TypeScript</span>
+          <span class="sk-tag">Java</span>
+          <span class="sk-tag">C</span>
+          <span class="sk-tag">C++</span>
+          <span class="sk-tag">R</span>
+          <span class="sk-tag">HTML5</span>
+          <span class="sk-tag">CSS3</span>
+        </div>
+      </div>
+      <div class="sk-card rv rv1">
+        <div class="sk-icon">⚡</div>
+        <h4>Frontend</h4>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag-b">React.js</span>
+          <span class="sk-tag sk-tag-b">TypeScript</span>
+          <span class="sk-tag sk-tag-b">Tailwind CSS</span>
+          <span class="sk-tag sk-tag-b">Node.js</span>
+          <span class="sk-tag sk-tag-b">Bootstrap</span>
+          <span class="sk-tag sk-tag-b">Responsive UI</span>
+        </div>
+      </div>
+      <div class="sk-card rv rv2">
+        <div class="sk-icon">🔧</div>
+        <h4>Backend</h4>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag-c">Flask</span>
+          <span class="sk-tag sk-tag-c">FastAPI</span>
+          <span class="sk-tag sk-tag-c">REST APIs</span>
+          <span class="sk-tag sk-tag-c">Streamlit</span>
+        </div>
+      </div>
+      <div class="sk-card rv rv1">
+        <div class="sk-icon">🤖</div>
+        <h4>AI / ML</h4>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag-d">Sentence Transformers</span>
+          <span class="sk-tag sk-tag-d">FAISS</span>
+          <span class="sk-tag sk-tag-d">RAG Pipelines</span>
+          <span class="sk-tag sk-tag-d">Scikit-learn</span>
+          <span class="sk-tag sk-tag-d">Gemini API</span>
+          <span class="sk-tag sk-tag-d">NumPy</span>
+          <span class="sk-tag sk-tag-d">Pandas</span>
+        </div>
+      </div>
+      <div class="sk-card rv rv2">
+        <div class="sk-icon">🗄️</div>
+        <h4>Databases</h4>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag-e">MySQL</span>
+          <span class="sk-tag sk-tag-e">ANSI SQL</span>
+          <span class="sk-tag sk-tag-e">Oracle SQL</span>
+          <span class="sk-tag sk-tag-e">FAISS (Vector DB)</span>
+        </div>
+      </div>
+      <div class="sk-card rv rv3">
+        <div class="sk-icon">🛠</div>
+        <h4>Tools &amp; Platforms</h4>
+        <div class="sk-tags">
+          <span class="sk-tag">Git · GitHub</span>
+          <span class="sk-tag">Selenium</span>
+          <span class="sk-tag">Figma</span>
+          <span class="sk-tag">Agile / Scrum</span>
+          <span class="sk-tag">VS Code</span>
+          <span class="sk-tag">MS Office 365</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ PROJECTS ══ -->
+<section id="projects" class="sec">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="sh-eye">Selected Work</p>
+      <h2>Featured Projects</h2>
+      <p>Production-oriented AI solutions and full-stack builds — end to end, from API design to polished UI.</p>
+    </div>
+    <div class="proj-grid">
+
+      <!-- FEATURED: Autonomous QA Agent -->
+      <div class="pc pc-feat rv">
+        <div class="pc-thumb">
+          <div class="pc-thumb-bg" style="background:linear-gradient(135deg,#080c20,#0d1a40,#1a1a6a,#4040cc);"></div>
+          <div class="pc-thumb-icon">🤖</div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cats">
+            <span class="pc-cat">RAG Pipeline</span>
+            <span class="pc-cat">Autonomous Agent</span>
+            <span class="pc-cat">QA Automation</span>
+          </div>
+          <h3>Autonomous QA Agent</h3>
+          <p>Designed a RAG-based autonomous QA agent using FastAPI and FAISS vector search to auto-generate structured Selenium test cases from uploaded requirement documents — reducing manual test-writing effort significantly. Built a Streamlit interface supporting document ingestion, knowledge-base creation, and exportable CSV/JSON outputs.</p>
+          <div class="pc-stack">
+            <span class="pc-tech">Python</span><span class="pc-tech">FastAPI</span><span class="pc-tech">Selenium</span><span class="pc-tech">FAISS</span><span class="pc-tech">RAG Pipeline</span><span class="pc-tech">Sentence-BERT</span><span class="pc-tech">Pandas</span><span class="pc-tech">Streamlit</span>
+          </div>
+          <div class="pc-links">
+            <a class="pc-link" href="https://github.com/JahnaviPonna/Autonomous-QA-Agent" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--Lung Cancer Detection and Segmentation-->
+      <div class="pc rv">
+      <div class="pc-thumb">
+        <div class="pc-thumb-bg" style="background:linear-gradient(135deg,#0b1f3a,#155799,#38b6ff);"></div>
+        <div class="pc-thumb-icon">🫁</div>
+      </div>
+
+      <div class="pc-body">
+        <div class="pc-cats">
+          <span class="pc-cat">Deep Learning</span>
+          <span class="pc-cat">Computer Vision</span>
+          <span class="pc-cat">Machine Learning</span>
+        </div>
+
+        <h3>Lung Cancer Detection & Prediction</h3>
+
+        <p>
+          Developed a hybrid AI system combining U-Net lung segmentation, VGG16 transfer learning for CT scan classification, and Random Forest–based symptom prediction. The solution analyzes both medical images and patient symptoms to support accurate lung cancer detection and risk assessment.
+        </p>
+
+        <div class="pc-stack">
+          <span class="pc-tech">Python</span>
+          <span class="pc-tech">TensorFlow</span>
+          <span class="pc-tech">Keras</span>
+          <span class="pc-tech">VGG16</span>
+          <span class="pc-tech">U-Net</span>
+          <span class="pc-tech">Scikit-Learn</span>
+          <span class="pc-tech">OpenCV</span>
+          <span class="pc-tech">Pandas</span>
+        </div>
+
+        <div class="pc-links">
+          <!-- <a class="pc-link" href="YOUR_LIVE_DEMO_LINK" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
+              <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
+            </svg>
+            Live Demo
+          </a> -->
+
+          <a class="pc-link" href="https://github.com/JahnaviPonna/lung-cancer-segmentation-and-detection" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+<!-- FEATURED: Resume Screening Assistant -->
+      <div class="pc rv">
+  <div class="pc-thumb">
+    <div class="pc-thumb-bg" style="background:linear-gradient(135deg,#120a30,#2a1060,#5c30b0);"></div>
+    <div class="pc-thumb-icon">📄</div>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-cats">
+      <span class="pc-cat">NLP</span>
+      <span class="pc-cat">Machine Learning</span>
+      <span class="pc-cat">Full-Stack</span>
+    </div>
+
+    <h3>Resume Screening Assistant</h3>
+
+    <p>
+      Developed a full-stack AI-powered resume screening system that classifies resumes across 20 job roles using semantic similarity, keyword matching, and alias detection. Supports PDF, scanned PDF (OCR), DOCX, and DOC uploads with an interactive dashboard for instant candidate evaluation and role prediction.
+    </p>
+
+    <div class="pc-stack">
+      <span class="pc-tech">Flask</span>
+      <span class="pc-tech">Sentence Transformers</span>
+      <span class="pc-tech">PyMuPDF</span>
+      <span class="pc-tech">pdfplumber</span>
+      <span class="pc-tech">pytesseract</span>
+      <span class="pc-tech">Chart.js</span>
+      <span class="pc-tech">Bootstrap 5</span>
+    </div>
+
+    <div class="pc-links">
+      <!-- <a class="pc-link" href="https://jahnaviponna.github.io/portfolio/resume-screener.html" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
+          <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
+        </svg>
+        Live Demo
+      </a> -->
+
+      <a class="pc-link" href="https://github.com/JahnaviPonna/resume-screening-assistant" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class="pc rv rv1">
+    <div class="pc-thumb">
+      <div class="pc-thumb-bg" style="background:linear-gradient(135deg,#1a0a2e,#6c1a7a,#c040b0);"></div>
+      <div class="pc-thumb-icon">🍳</div>
+    </div>
+
+    <div class="pc-body">
+      <div class="pc-cats">
+        <span class="pc-cat">Gemini API</span>
+        <span class="pc-cat">NLP</span>
+        <span class="pc-cat">Flask</span>
+      </div>
+
+    <h3>AI Recipe Generator</h3>
+
+    <p>
+      Developed an AI-powered recipe generation platform that transforms natural language ingredient inputs into structured, personalized recipes using the Google Gemini API. Built a full-stack Flask application with a responsive JavaScript frontend for real-time recipe generation and seamless user interaction.
+    </p>
+
+    <div class="pc-stack">
+      <span class="pc-tech">Flask</span>
+      <span class="pc-tech">Gemini API</span>
+      <span class="pc-tech">JavaScript</span>
+      <span class="pc-tech">HTML5</span>
+      <span class="pc-tech">CSS3</span>
+    </div>
+
+    <div class="pc-links">
+      <!-- <a class="pc-link" href="https://jahnaviponna.github.io/portfolio/recipe-generator.html" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
+          <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
+        </svg>
+        Live Demo
+      </a> -->
+
+      <a class="pc-link" href="https://github.com/JahnaviPonna/ai-recipe-maker" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+      <!-- AI Chatbot -->
+      <div class="pc rv">
+  <div class="pc-thumb">
+    <div class="pc-thumb-bg" style="background:linear-gradient(135deg,#071a3a,#0e3a7a,#1a6acc);"></div>
+    <div class="pc-thumb-icon">💬</div>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-cats">
+      <span class="pc-cat">Gemini API</span>
+      <span class="pc-cat">Conversational AI</span>
+    </div>
+
+    <h3>AI Chatbot</h3>
+
+    <p>
+      Built an AI-powered conversational assistant using the Google Gemini API with contextual dialogue, real-time response generation, and persistent chat history. Developed a Flask backend and responsive JavaScript frontend to deliver an intuitive, low-latency user experience.
+    </p>
+
+    <div class="pc-stack">
+      <span class="pc-tech">Flask</span>
+      <span class="pc-tech">Gemini API</span>
+      <span class="pc-tech">JavaScript</span>
+      <span class="pc-tech">Python</span>
+    </div>
+
+    <div class="pc-links">
+      <!-- <a class="pc-link" href="https://jahnaviponna.github.io/portfolio/ai-chatbot.html" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
+          <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
+        </svg>
+        Live Demo
+      </a> -->
+
+      <a class="pc-link" href="https://github.com/JahnaviPonna/chatbot-ai" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+      <!-- Recurring Date Picker -->
+      <div class="pc rv rv1">
+  <div class="pc-thumb">
+    <div class="pc-thumb-bg" style="background:linear-gradient(135deg,#0a2a1a,#0e5a34,#1a9a5c);"></div>
+    <div class="pc-thumb-icon">📅</div>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-cats">
+      <span class="pc-cat">JavaScript</span>
+      <span class="pc-cat">UI Component</span>
+    </div>
+
+    <h3>Recurring Date Picker</h3>
+
+    <p>
+      Developed a lightweight, dependency-free recurring date picker supporting daily, weekly, monthly, yearly, and custom recurrence patterns. Built with vanilla JavaScript, featuring an intuitive calendar interface, flexible scheduling options, and responsive cross-browser compatibility.
+    </p>
+
+    <div class="pc-stack">
+      <span class="pc-tech">Vanilla JS</span>
+      <span class="pc-tech">HTML5</span>
+      <span class="pc-tech">CSS3</span>
+    </div>
+
+    <div class="pc-links">
+      <!-- <a class="pc-link" href="https://jahnaviponna.github.io/portfolio/date-picker.html" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
+          <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
+        </svg>
+        Live Demo
+      </a> -->
+
+      <a class="pc-link" href="https://github.com/JahnaviPonna/recurring-date-picker-js" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+      <!-- PulseFit -->
+      <!-- <div class="pc rv">
+  <div class="pc-thumb">
+    <div class="pc-thumb-bg" style="background:linear-gradient(135deg,#2a0a0a,#7a1a1a,#e04040);"></div>
+    <div class="pc-thumb-icon">💪</div>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-cats">
+      <span class="pc-cat">Tailwind CSS</span>
+      <span class="pc-cat">Responsive</span>
+    </div>
+
+    <h3>PulseFit — Fitness Landing Page</h3>
+
+    <p>
+      Designed and developed a modern, responsive fitness landing page with Tailwind CSS, featuring smooth animations, mobile-first layouts, and optimized user experience. Built as a production-ready frontend project during the OctaNet internship, emphasizing clean UI design and responsive performance.
+    </p>
+
+    <div class="pc-stack">
+      <span class="pc-tech">HTML5</span>
+      <span class="pc-tech">Tailwind CSS</span>
+      <span class="pc-tech">JavaScript</span>
+    </div>
+
+    <div class="pc-links">
+      <a class="pc-link" href="https://jahnaviponna.github.io/portfolio/pulsefit.html" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
+          <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
+        </svg>
+        Live Demo
+      </a> -->
+
+      <!-- <a class="pc-link" href="https://github.com/JahnaviPonna/pulsefit-page" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</div> -->
+
+      <!-- Tic Tac Toe -->
+      <div class="pc rv rv1">
+  <div class="pc-thumb">
+    <div class="pc-thumb-bg" style="background:linear-gradient(135deg,#1a1806,#4a4408,#8a8018);"></div>
+    <div class="pc-thumb-icon">🎮</div>
+  </div>
+
+  <div class="pc-body">
+    <div class="pc-cats">
+      <span class="pc-cat">JavaScript</span>
+      <span class="pc-cat">Game Development</span>
+    </div>
+
+    <h3>Tic Tac Toe App</h3>
+
+    <p>
+      Developed an interactive two-player Tic Tac Toe game using vanilla JavaScript, featuring real-time win and draw detection, animated game states, score tracking, and one-click replay. Designed a responsive, intuitive interface for a smooth cross-device gaming experience.
+    </p>
+
+    <div class="pc-stack">
+      <span class="pc-tech">HTML5</span>
+      <span class="pc-tech">CSS3</span>
+      <span class="pc-tech">JavaScript</span>
+    </div>
+
+    <div class="pc-links">
+      <!-- <a class="pc-link" href="https://jahnaviponna.github.io/portfolio/tic-tac-toe.html" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
+          <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
+        </svg>
+        Live Demo
+      </a> -->
+
+      <a class="pc-link" href="https://github.com/JahnaviPonna/tic-tac-toe-app" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ EXPERIENCE ══ -->
+<section id="experience" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="sh-eye">My Career Path</p>
+      <h2>Work Experience</h2>
+      <p>Internships and leadership roles where I shipped real features in production environments.</p>
+    </div>
+    <div class="xp-wrap">
+
+      <!-- PearlThoughts -->
+      <div class="xp-item rv">
+        <div class="xp-left">
+          <div class="xp-period">Jul 2025 – Aug 2025</div>
+          <div class="xp-loc">Tamil Nadu, Remote</div>
+        </div>
+        <div class="xp-right">
+          <div class="xp-badge">⚡ Internship</div>
+          <h3>Frontend Developer Intern</h3>
+          <div class="xp-org">PearlThoughts</div>
+          <ul class="xp-bullets">
+            <li>Engineered responsive, accessible UI components for <strong style="color:var(--text)">Schedula v2.0</strong>, a live doctor-appointment scheduling platform — using React, TypeScript, and Tailwind CSS.</li>
+            <li>Delivered core product features including doctor discovery, appointment booking, patient profile management, and real-time chat — improving end-to-end user workflow.</li>
+            <li>Operated within an Agile sprint cycle with daily stand-ups and cross-functional planning, consistently shipping features on schedule across a 1-month engagement.</li>
+          </ul>
+          <div class="xp-stack">
+            <span class="xp-tech">React.js</span><span class="xp-tech">TypeScript</span><span class="xp-tech">Tailwind CSS</span><span class="xp-tech">Agile / Scrum</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- OctaNet -->
+      <div class="xp-item rv rv1">
+        <div class="xp-left">
+          <div class="xp-period">2024</div>
+          <div class="xp-loc">Remote</div>
+        </div>
+        <div class="xp-right">
+          <div class="xp-badge">💻 Internship</div>
+          <h3>Web Developer Intern</h3>
+          <div class="xp-org">OctaNet</div>
+          <ul class="xp-bullets">
+            <li>Built a responsive <strong style="color:var(--text)">To-Do List</strong> application with dynamic task management features using HTML and CSS.</li>
+            <li>Created the <strong style="color:var(--text)">PulseFit Fitness Landing Page</strong> — a responsive, mobile-first homepage for a fitness platform using Tailwind CSS.</li>
+            <li>Delivered clean, production-ready front-end code within a professional internship environment.</li>
+          </ul>
+          <div class="xp-stack">
+            <span class="xp-tech">HTML5</span><span class="xp-tech">CSS3</span><span class="xp-tech">Tailwind CSS</span><span class="xp-tech">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIY Club -->
+      <div class="xp-item rv rv2">
+        <div class="xp-left">
+          <div class="xp-period">Sep 2023 – May 2024</div>
+          <div class="xp-loc">VIT-AP, Amaravati</div>
+        </div>
+        <div class="xp-right">
+          <div class="xp-badge">🎯 Leadership</div>
+          <h3>Event Manager</h3>
+          <div class="xp-org">DIY Club, VIT-AP University</div>
+          <ul class="xp-bullets">
+            <li>Led end-to-end event coordination — planning, marketing collaboration, and resource management — driving measurable growth in engagement and attendance.</li>
+            <li>Coordinated with cross-functional teams and managed logistics to ensure smooth execution across multiple events.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Engineering Clinics -->
+      <!-- <div class="xp-item rv rv1">
+        <div class="xp-left">
+          <div class="xp-period">2022 – Present</div>
+          <div class="xp-loc">VIT-AP, Amaravati</div>
+        </div>
+        <div class="xp-right">
+          <div class="xp-badge">🔬 Academic</div>
+          <h3>Team Member — Engineering Clinics Project</h3>
+          <div class="xp-org">VIT-AP University</div>
+          <ul class="xp-bullets">
+            <li>Collaborated within a cross-functional team to contribute to team efficiency and meet project milestones.</li>
+            <li>Adapted rapidly to evolving project tasks and contributed to measurable improvement in team productivity and outcomes.</li>
+          </ul>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ EDUCATION ══ -->
+<section id="education" class="sec">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="sh-eye">My Journey</p>
+      <h2>Education</h2>
+      <p>Academic excellence across every stage — consistently in the top percentile.</p>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card rv">
+        <span class="edu-badge-type">🎓 B.Tech</span>
+        <h3>Computer Science &amp; Business Systems</h3>
+        <div class="inst">VIT-AP University, Amaravati</div>
+        <div class="period">Nov 2022 – Jun 2026</div>
+        <div class="edu-highlight">
+          <div class="edu-hl-val">9.18 / 10</div>
+          <div class="edu-hl-sub">CGPA · Departmental Rank 9th · CS &amp; BS (2024–25)</div>
+        </div>
+        <div style="margin-top:16px;">
+          <div style="font-size:12px;color:var(--muted2);margin-bottom:8px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">Coursework</div>
+          <div class="sk-tags" style="gap:6px;">
+            <span class="sk-tag" style="font-size:11px;">Data Structures &amp; Algorithms</span>
+            <span class="sk-tag" style="font-size:11px;">Machine Learning</span>
+            <span class="sk-tag" style="font-size:11px;">DBMS</span>
+            <span class="sk-tag" style="font-size:11px;">OOP</span>
+            <span class="sk-tag" style="font-size:11px;">Operating Systems</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-card rv rv1">
+        <span class="edu-badge-type">📚 Class XII</span>
+        <h3>MPC — Mathematics, Physics, Chemistry</h3>
+        <div class="inst">Sasi Jr College, Tadepalligudem</div>
+        <div class="period">Jul 2020 – Jul 2022</div>
+        <div class="edu-highlight">
+          <div class="edu-hl-val">98.1%</div>
+          <div class="edu-hl-sub">Board of Secondary Education, Andhra Pradesh</div>
+        </div>
+      </div>
+      <div class="edu-card rv rv2">
+        <span class="edu-badge-type">🏫 Class X</span>
+        <h3>Secondary School Certificate</h3>
+        <div class="inst">St. Xavier E.M School, Ibrahimpatnam</div>
+        <div class="period">Jun 2019 – Jun 2020</div>
+        <div class="edu-highlight">
+          <div class="edu-hl-val">99.66%</div>
+          <div class="edu-hl-sub">Secondary Education · Among top scorers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ CERTIFICATIONS ══ -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="sh-eye">Verified Learning</p>
+      <h2>Certifications</h2>
+      <p>Industry-recognized credentials from IBM, Microsoft, Cisco, and more.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card rv">
+        <div class="cert-icon">🧠</div>
+        <div class="cert-info">
+          <h4>Generative AI Using IBM Watsonx</h4>
+          <span>IBM Career Education Program</span>
+        </div>
+      </div>
+      <div class="cert-card rv rv1">
+        <div class="cert-icon">📊</div>
+        <div class="cert-info">
+          <h4>Professional Certificate in Project &amp; Process Management</h4>
+          <span>Udemy</span>
+        </div>
+      </div>
+      <div class="cert-card rv rv2">
+        <div class="cert-icon">💼</div>
+        <div class="cert-info">
+          <h4>Career Essentials in Software Development</h4>
+          <span>Microsoft &amp; LinkedIn</span>
+        </div>
+      </div>
+      <div class="cert-card rv rv3">
+        <div class="cert-icon">🔌</div>
+        <div class="cert-info">
+          <h4>Programming Essentials in C++ (CPA)</h4>
+          <span>Cisco Networking Academy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ ACHIEVEMENTS ══ -->
+<section id="achievements" class="sec">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="sh-eye">Milestones &amp; Honours</p>
+      <h2>Key Achievements</h2>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card rv">
+        <span class="ach-icon">🏆</span>
+        <h4>Student Academic Merit Award — 3 Consecutive Years</h4>
+        <p>Recognized for outstanding academic performance across three consecutive years at VIT-AP University, consistently ranking among the top 10 students in the department.</p>
+      </div>
+      <div class="ach-card rv rv1">
+        <span class="ach-icon">🥇</span>
+        <h4>Departmental Rank 9th — CS &amp; Business Systems</h4>
+        <p>Achieved Departmental Rank 9th in Computer Science &amp; Business Systems for the academic year 2024–25 with a CGPA of 9.18 out of 10.</p>
+      </div>
+      <!-- <div class="ach-card rv rv2">
+        <span class="ach-icon">🤖</span>
+        <h4>5+ AI-Powered Projects Shipped</h4>
+        <p>Built and deployed 5+ production-oriented AI projects spanning RAG pipelines, NLP classifiers, autonomous agents, and Gemini API integrations — all with real-world applicability.</p>
+      </div> -->
+      <div class="ach-card rv">
+        <span class="ach-icon">⚡</span>
+        <h4>Live Product Delivery — Schedula v2.0</h4>
+        <p>Delivered core product features (doctor discovery, appointment booking, real-time chat) for a live scheduling platform at PearlThoughts — shipped within Agile sprints on schedule.</p>
+      </div>
+      <!-- <div class="ach-card rv rv1">
+        <span class="ach-icon">🎓</span>
+        <h4>Academic Excellence Streak</h4>
+        <p>99.66% in Class X (St. Xavier's) · 98.1% in Class XII (Sasi Jr College) · 9.18 CGPA in B.Tech — a consistent top-performer across all academic levels.</p>
+      </div> -->
+      <!-- <div class="ach-card rv rv2">
+        <span class="ach-icon">🔬</span>
+        <h4>88–92% ML Classification Accuracy</h4>
+        <p>Achieved 88–92% classification accuracy across 20 job roles in the Resume Screening Assistant using a multi-signal approach — semantic similarity, keyword coverage &amp; alias detection.</p>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="sh-eye">Get In Touch</p>
+      <h2>Let's Build<br>Something Great</h2>
+    </div>
+    <div class="contact-box rv">
+      <div class="contact-inner">
+        <h3>Open to full-time roles,<br>internships &amp; collaborations</h3>
+        <p>Have an opening, a project idea, or just want to say hi? Reach out directly — I'm always open to meaningful conversations.</p>
+        <a class="contact-email" href="mailto:jahnavispponna@gmail.com">jahnavispponna@gmail.com</a>
+        <div class="contact-phone">📞 +91-8179676575 &nbsp;·&nbsp; 📍 Guntur District, Andhra Pradesh</div>
+        <div class="socials">
+          <a class="soc" href="https://linkedin.com/in/jahnavi-sushma-priya-p/" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a class="soc" href="https://github.com/JahnaviPonna" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+          <a class="soc" href="https://instagram.com/jahnavi._.p04" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a class="soc" href="Jahnavi_Resume.pdf" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>© 2025 Ponna Jahnavi Sushma Priya · Built with care · <a href="https://github.com/JahnaviPonna" target="_blank">GitHub</a> · <a href="https://linkedin.com/in/jahnavi-sushma-priya-p/" target="_blank">LinkedIn</a></p>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
